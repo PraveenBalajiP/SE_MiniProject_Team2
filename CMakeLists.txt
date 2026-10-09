@@ -1,3 +1,4 @@
+
 cmake_minimum_required(VERSION 3.16)
 
 project(RailwayReservationSystem
@@ -18,4 +19,13 @@ add_executable(railway_reservation
 target_include_directories(railway_reservation
     PRIVATE
         include
+)
+
+add_executable(basic_test
+    tests/unit/basic_test.cpp
+)
+
+add_test(
+    NAME BasicSmokeTest
+    COMMAND basic_test
 )
